@@ -1,8 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-
-#nullable disable
+using NswService.Domain;
 
 namespace NswService.Domain.Models
 {
@@ -20,14 +19,6 @@ namespace NswService.Domain.Models
         public virtual DbSet<Registration> Registrations { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserRegistration> UserRegistrations { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("Server=PRATIKPATEL;Database=NSW;Trusted_Connection=True;");
-            }
-        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -99,6 +90,26 @@ namespace NswService.Domain.Models
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_UserRegistrations_Users");
             });
+
+            modelBuilder.Entity<User>().HasData(
+                new User { Id = 1, Name = "Name 1", Address = "Address 1" },
+                new User { Id = 2, Name = "Name 2", Address = "Address 2" },
+                new User { Id = 3, Name = "Name 3", Address = "Address 3" }
+            );
+
+            modelBuilder.Entity<Registration>().HasData(
+                new Registration { Id = 1, PlateNumber = "platenumber 1", Colour = "color 1", ExpiryDate = new DateTime(2030, 1, 1), GrossMass = "100", InsurerCode = "INS Code 1", InsurerName = "INS Name", Make = "Make 1", Model = "Model 1", TareWeight = "122", Type = "Type 1", Vin = "Vin 1" },
+                new Registration { Id = 2, PlateNumber = "platenumber 2", Colour = "color 1", ExpiryDate = new DateTime(2030, 1, 1), GrossMass = "100", InsurerCode = "INS Code 1", InsurerName = "INS Name", Make = "Make 1", Model = "Model 1", TareWeight = "122", Type = "Type 1", Vin = "Vin 1" },
+                new Registration { Id = 3, PlateNumber = "platenumber 3", Colour = "color 1", ExpiryDate = new DateTime(2030, 1, 1), GrossMass = "100", InsurerCode = "INS Code 1", InsurerName = "INS Name", Make = "Make 1", Model = "Model 1", TareWeight = "122", Type = "Type 1", Vin = "Vin 1" },
+                new Registration { Id = 4, PlateNumber = "platenumber 4", Colour = "color 1", ExpiryDate = new DateTime(2030, 1, 1), GrossMass = "100", InsurerCode = "INS Code 1", InsurerName = "INS Name", Make = "Make 1", Model = "Model 1", TareWeight = "122", Type = "Type 1", Vin = "Vin 1" }
+            );
+
+            modelBuilder.Entity<UserRegistration>().HasData(
+                new UserRegistration { Id = 1, UserId = 1, RegistrationId = 1 },
+                new UserRegistration { Id = 2, UserId = 1, RegistrationId = 2 },
+                new UserRegistration { Id = 3, UserId = 1, RegistrationId = 3 },
+                new UserRegistration { Id = 4, UserId = 2, RegistrationId = 4 }
+            );
 
             OnModelCreatingPartial(modelBuilder);
         }

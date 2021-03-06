@@ -7,6 +7,6 @@ namespace NswService.Domain.Interfaces
 {
     public interface IVehicleService
     {
-        public UserRegistrationsDto GetRegistrations(int userId);
+        public UserRegistrationsDto GetRegistrationsByUserId(int userId);
     }
 }

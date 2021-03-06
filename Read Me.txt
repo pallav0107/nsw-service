@@ -1,0 +1,11 @@
+Steps to run the application:
+
+1) Open the solution in visual studio 2019 from the solution file located at /nsw/NswService/NswService.sln
+2) Build the project successfully using IDE
+3) Create the new database with the name NSW in sql server
+4) Execute the database script to create the tables in sql server
+5) Make the NswService as startup project
+6) Run the application and put the following route in the browser/postman
+https://localhost:44326/api/Registration/1
+
+7) Get the json data

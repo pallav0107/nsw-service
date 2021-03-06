@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NswService", "NswService.csproj", "{A2C4F112-A539-4A3C-B37A-015C5DB08C5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NswService", "NswService.csproj", "{A2C4F112-A539-4A3C-B37A-015C5DB08C5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NswService.Domain", "..\NswService.Domain\NswService.Domain.csproj", "{61809B6D-BFCF-4EED-ACF3-A05E66C25AFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NswService.Domain", "..\NswService.Domain\NswService.Domain.csproj", "{61809B6D-BFCF-4EED-ACF3-A05E66C25AFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NswService.Tests", "..\NswService.Tests\NswService.Tests.csproj", "{55E2734D-FA1D-4150-BAD6-C315F87E84F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{61809B6D-BFCF-4EED-ACF3-A05E66C25AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61809B6D-BFCF-4EED-ACF3-A05E66C25AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61809B6D-BFCF-4EED-ACF3-A05E66C25AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55E2734D-FA1D-4150-BAD6-C315F87E84F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E2734D-FA1D-4150-BAD6-C315F87E84F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E2734D-FA1D-4150-BAD6-C315F87E84F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E2734D-FA1D-4150-BAD6-C315F87E84F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

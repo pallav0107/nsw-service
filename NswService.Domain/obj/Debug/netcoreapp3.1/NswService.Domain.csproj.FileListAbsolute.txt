@@ -1,0 +1,12 @@
+C:\Users\ppokhriyal\OneDrive - NSW Land Registry Services\Documents\nsw-master\NswService.Domain\bin\Debug\netcoreapp3.1\NswService.Domain.deps.json
+C:\Users\ppokhriyal\OneDrive - NSW Land Registry Services\Documents\nsw-master\NswService.Domain\bin\Debug\netcoreapp3.1\NswService.Domain.runtimeconfig.json
+C:\Users\ppokhriyal\OneDrive - NSW Land Registry Services\Documents\nsw-master\NswService.Domain\bin\Debug\netcoreapp3.1\NswService.Domain.runtimeconfig.dev.json
+C:\Users\ppokhriyal\OneDrive - NSW Land Registry Services\Documents\nsw-master\NswService.Domain\bin\Debug\netcoreapp3.1\NswService.Domain.dll
+C:\Users\ppokhriyal\OneDrive - NSW Land Registry Services\Documents\nsw-master\NswService.Domain\bin\Debug\netcoreapp3.1\NswService.Domain.pdb
+C:\Users\ppokhriyal\OneDrive - NSW Land Registry Services\Documents\nsw-master\NswService.Domain\obj\Debug\netcoreapp3.1\NswService.Domain.csprojAssemblyReference.cache
+C:\Users\ppokhriyal\OneDrive - NSW Land Registry Services\Documents\nsw-master\NswService.Domain\obj\Debug\netcoreapp3.1\NswService.Domain.AssemblyInfoInputs.cache
+C:\Users\ppokhriyal\OneDrive - NSW Land Registry Services\Documents\nsw-master\NswService.Domain\obj\Debug\netcoreapp3.1\NswService.Domain.AssemblyInfo.cs
+C:\Users\ppokhriyal\OneDrive - NSW Land Registry Services\Documents\nsw-master\NswService.Domain\obj\Debug\netcoreapp3.1\NswService.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ppokhriyal\OneDrive - NSW Land Registry Services\Documents\nsw-master\NswService.Domain\obj\Debug\netcoreapp3.1\NswService.Domain.dll
+C:\Users\ppokhriyal\OneDrive - NSW Land Registry Services\Documents\nsw-master\NswService.Domain\obj\Debug\netcoreapp3.1\NswService.Domain.pdb
+C:\Users\ppokhriyal\OneDrive - NSW Land Registry Services\Documents\nsw-master\NswService.Domain\obj\Debug\netcoreapp3.1\NswService.Domain.genruntimeconfig.cache

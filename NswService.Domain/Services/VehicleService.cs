@@ -9,7 +9,7 @@ using System.Text;
 
 namespace NswService.Domain.Services
 {
-    public class VehicleService : IVehicleService
+    public class VehicleService : IVehicleService, IDisposable
     {
         private NSWContext VechileContext;
 
@@ -18,9 +18,14 @@ namespace NswService.Domain.Services
             this.VechileContext = vehicleContext;
         }
 
-        public UserRegistrationsDto GetRegistrations(int userId)
+        public void Dispose()
         {
-            var registrations = VechileContext.UserRegistrations.Include(a => a.Registration).Include(a => a.User).Where(a => a.UserId == userId).ToList();
+            VechileContext.Dispose();
+        }
+
+        public UserRegistrationsDto GetRegistrationsByUserId(int userId)
+        {
+            var registrations = VechileContext.UserRegistrations.Include(a=>a.User).Include(a=>a.Registration).Where(a => a.UserId == userId).ToList();
 
             var userRegistrationsDto = new UserRegistrationsDto();
 

@@ -2,12 +2,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using NswService.Domain.Interfaces;
+using NswService.Domain.Models;
 using NswService.Domain.Services;
 using System;
 using System.Collections.Generic;
@@ -34,7 +36,10 @@ namespace NswService
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "NswService", Version = "v1" });
             });
-            services.AddSingleton(typeof(IVehicleService), new VehicleService(new Domain.Models.NSWContext()));
+
+            services.AddDbContext<NSWContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:NswSqlServer"]));
+
+            services.AddTransient<IVehicleService, VehicleService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

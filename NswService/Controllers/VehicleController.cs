@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace NswService.Controllers
 {
+    [Route("api")]
+
     public class VehicleController : Controller
     {
         private IVehicleService vehicleService;
@@ -16,9 +18,10 @@ namespace NswService.Controllers
         }
 
         [Route("Registrations/{userId}")]
+        [HttpGet]
         public IActionResult GetVehicleData(int userId)
         {
-            var registrations = vehicleService.GetRegistrations(userId);
+            var registrations = vehicleService.GetRegistrationsByUserId(userId);
 
             var registrationsSerialized = Newtonsoft.Json.JsonConvert.SerializeObject(registrations);
 
